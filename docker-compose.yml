@@ -1,0 +1,19 @@
+networks:
+  default:
+    name: training-network
+
+services:
+  spring-microservice:
+    container_name: spring-microservice
+    image: spring-microservice:0.0.2
+    ports:
+      - "80:9000"
+
+  spring-microservice2:
+    container_name: spring-microservice2
+    image: spring-microservice2:0.0.1
+    ports:
+      - "81:9001"
+
+
+version: '3.5'
